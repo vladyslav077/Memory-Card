@@ -58,27 +58,12 @@ def setQuest():
     random.shuffle(answers)
     Apple1.setText(BAZA.quest[BAZA.currentQuest]["питання"])
     answers[0].setText(BAZA.quest[BAZA.currentQuest]["Правильна відповідь"])
-    answers[1].setText(BAZA.quest[BAZA.currentQuest]["Правильна відповідь"])
-    answers[2].setText(BAZA.quest[BAZA.currentQuest]["Правильна відповідь"])
-    answers[3].setText(BAZA.quest[BAZA.currentQuest]["Правильна відповідь"])
-
-
-
-
-
-
-
-
+    answers[1].setText(BAZA.quest[BAZA.currentQuest]["не правильна1"])
+    answers[2].setText(BAZA.quest[BAZA.currentQuest]["не правильна2"])
+    answers[3].setText(BAZA.quest[BAZA.currentQuest]["не правильна3"])
 
 
 setQuest()
-
-
-
-
-
-
-
 def showResult():
     answers[0].hide()
     answers[1].hide()
@@ -89,6 +74,18 @@ def showResult():
     Apple.hide()
 
 
+    if answers[0].isChecked():
+        result.setText("Правильно")
+    else:
+        result.setText("не правильно")
+
+
+
+def nextFunc():
+    #показати кнопки
+    #приховати результат
+    BAZA.currentQuest += 1
+    setQuest()
 
 Apple.clicked.connect(showResult)
 
