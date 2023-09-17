@@ -4,6 +4,64 @@ import BAZA
 import NENN
 import editwin
 app = QApplication([])
+app.setStyleSheet("""
+    QWidget {
+        background: #96C291;
+         
+    }
+    QPushButton {
+        background-color: #7D7C7C;
+        border-style: outset;
+        font-size: 11px;
+        font-family: Impact;
+        color: #FAF8F1;
+        border-style: groove;
+        border-width: 3px;
+        border-color: #F6E1C3;
+        border-radius: 5px;
+        min-width: 6em;
+        padding: 6px;
+        
+    }
+    QGroupBox {
+        border-style: groove;
+        border-width: 3px;
+        border-color: #F6E1C3;
+        border-radius: 5px;
+        background-color: #FFD9C0;
+        
+    }
+    QSpinBox {
+        border-style: groove;
+        border-width: 3px;
+        border-color: #F6E1C3;
+        border-radius: 5px;
+       
+    }
+    QLabel {
+        border-style: groove;
+        border-width: 3px;
+        max-height: 20px;
+        min-width: 40px;
+        border-color: #F6E1C3;
+        border-radius: 5px;
+        
+    }
+    QLabel#time {
+        background-color: #E9B384;
+        
+        
+    }
+    QRadioButton {
+       background-color: #FFEECC;
+       
+       
+    }
+   
+       
+""")
+
+
 window = QWidget()
 
 window.resize(500, 500)
@@ -17,6 +75,7 @@ timeLbl = QLabel("хвилин")
 Anwer = QPushButton("Відповісти")
 Anwer1 = QLabel("Яблуко")
 Anwer2 = QPushButton("Наступне питання")
+timeLbl.setObjectName("time")
 ediit = QPushButton ("Редагувати питання")
 
 firstLine = QHBoxLayout()
